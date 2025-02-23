@@ -18,3 +18,18 @@ Escribe una función que reciba un arreglo de strings y un elemento, y devuelva 
 **Contar la frecuencia de palabras en una oración**: 
 Escribe una función que reciba una oración y cuente cuántas veces aparece cada palabra en la misma. La función debe devolver un diccionario donde las claves sean las palabras y los valores sean las frecuencias de aparición. 
 Ejemplo: Para la oración "hola juan, ¿cómo estás? ¿cómo está tu abuela?", la función debería devolver `{"hola": 1, "juan": 1, "cómo": 2, "estás": 1, "está": 1, "tu": 1, "abuela": 1}`.
+
+## Ejercicio Desafío: El Anagrama Perdido
+Un anagrama es una palabra o frase formada reorganizando las letras de otra palabra o frase. Por ejemplo, roma y amor son anagramas.
+
+### Tu tarea:
+Escribe una función que reciba dos strings y determine si son anagramas entre sí. No puedes usar funciones de alto nivel como sorted.
+
+### Ejemplo:
+```python
+print(es_anagrama("roma", "amor"))  # True  
+print(es_anagrama("python", "typhon"))  # True  
+print(es_anagrama("hola", "halo"))  # False  
+```
+
+📌 Tip: Piensa en cómo podrías contar las apariciones de cada letra en ambas palabras y compararlas.
