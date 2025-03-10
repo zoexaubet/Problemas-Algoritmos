@@ -1,4 +1,3 @@
-
 CC = gcc
 CFLAGS = -g -std=c99 -Wall -Wconversion -Wno-sign-conversion -Werror
 TARGET = product_except_self_tests
@@ -13,4 +12,4 @@ run: $(TARGET)
 
 clean:
 	rm -f $(TARGET)
-	rm -r *.dSYM 
+	rm -r *.dSYM

@@ -1,7 +1,22 @@
+// EJERCICIO 2: Producto de arrays excepto el propio elemento
+//
+// Descripción: Dado un array de números enteros, devuelve un array output tal que output[i] es igual al producto de todos los elementos de nums excepto nums[i].
+// Entrada: Un array de enteros.
+// Salida: Un array de enteros con los productos.
+
 #include <stdio.h>
 #include <stdlib.h>
 
 void product_except_self(int* nums, int numsSize, int* output) {
+    for (int i = 0; i < numsSize; i++){
+        int product = 1; //porque si lo inicializo en 0 me da siempre 0
+        for (int j = 0; j < numsSize; j++){
+            if (j != i) {
+                product = product * nums[j];
+            }
+        }
+        output[i] = product;
+    }
 
 }
 

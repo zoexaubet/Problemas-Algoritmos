@@ -1,3 +1,9 @@
+// EJERCICIO 3: Buscar el primer número que falta en una secuencia ordenada
+//
+// Descripción: Dado un array de números enteros que representa una secuencia ordenada, pero con algunos números faltantes, encuentra el primer número que falta en la secuencia.
+// Entrada: Un array de enteros ordenados y sin repetidos.
+// Salida: Un entero que representa el primer número faltante en la secuencia.
+
 #include <stdio.h>
 
 int find_missing_number(int* nums, int nums_size) {
