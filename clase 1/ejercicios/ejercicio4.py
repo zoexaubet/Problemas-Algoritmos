@@ -6,8 +6,18 @@ def count_word_frequency(sentence):
     :param sentence: str - The sentence to analyze
     :return: dict - A dictionary with words as keys and their frequencies as values
     """
-    # Implement the algorithm to count word frequencies here
-    pass
+    word_dict = {}
+
+    sentence = sentence.lower()
+    words = sentence.split() 
+    
+    for word in words:
+        if word in word_dict:
+            word_dict[word] += 1
+        else:
+            word_dict[word] = 1
+    
+    return word_dict
 
 # Test Cases
 def test_count_word_frequency():
