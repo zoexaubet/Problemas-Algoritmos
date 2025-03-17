@@ -25,7 +25,13 @@ EventList* create_event_list() {
 }
 
 void add_event(EventList* list, time_t timestamp, int duration) {
-   // TODO
+    struct node *new_node;
+    new_node = (struct node *)malloc(sizeof(struct node));
+    new_node->num = num;
+    new_node->nextptr = stnode;
+    new_node->preptr = NULL;
+    stnode->preptr = newnode;
+    stnode = newnode;
 }
 
 void remove_expired_events(EventList* list, time_t current_time) {
