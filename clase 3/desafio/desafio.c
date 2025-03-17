@@ -27,7 +27,6 @@ void run_tests() {
   int m4[1][1] = {{5}};
   int* test_4[] = {m4[0]};
 
-  // Definimos los casos de prueba
   TestCase tests[] = {
       {test_1, 3, 2},
       {test_2, 2, 2},
