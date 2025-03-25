@@ -1,42 +1,69 @@
-# Clase IV
-*Algoritmos y estructuras de datos*
+# 📚 Clase IV: Algoritmos y Estructuras de Datos  
 
-## Problema 1: Top K
+## 🏆 Problema 1: Top K  
 
-*Ejercicio 8.2*
+**Ejercicio 8.2**  
 
-### Enunciado
+### 🔹 Enunciado  
 
-Queremos una función top k que recibe un arreglo de números y un
-valor k y devuelve los k mayores del arreglo. 
+Se requiere una función **top k** que reciba un arreglo de números y un valor `k`, y devuelva los `k` mayores elementos del arreglo.  
 
-1. La primer implementación ordena el arreglo y busca los k mayores en las primeras k
-posiciones. Indique el orden.
-2. La segunda implementación usa un arreglo auxiliar de k elementos. Se recorre el arreglo de números y cada número se compara con los k en el arreglo auxiliar: si es mayor a alguno se saca el menor de ellos reemplazándolo por el nuevo. Indique el orden de esta implementación.
-   
-3. Realice una implementación cuyo orden sea O(n log k).
+Se analizan tres implementaciones con distintas complejidades:  
 
+1. **Ordenando el arreglo:**  
+   - Se ordena el arreglo y se toman los `k` mayores.  
+   - 📌 **Pregunta:** ¿Cuál es la complejidad de esta implementación?  
 
-## Problema 2: Mantenimiento de Mediana Dinámica
+2. **Usando un arreglo auxiliar de `k` elementos:**  
+   - Se mantiene un arreglo auxiliar con los `k` mayores elementos vistos hasta el momento.  
+   - Cada nuevo número se compara con los elementos del arreglo auxiliar, y si es mayor a alguno, se reemplaza al menor de ellos.  
+   - 📌 **Pregunta:** ¿Cuál es la complejidad de esta implementación?  
 
-*Ejercicio 8.6*
+3. **Optimización con `O(n log k)`:**  
+   - Diseñar e implementar una solución eficiente que mantenga los `k` mayores elementos con una complejidad **O(n log k)**.  
 
-### Enunciado:
-Estás desarrollando un sistema que necesita calcular la mediana de un conjunto de números en tiempo real. Inicialmente, el sistema está vacío, y los números se agregan uno por uno. Después de cada adición, debes devolver la mediana del conjunto actual.
+---
 
-La mediana es el valor que divide el conjunto de números en dos partes iguales: la mitad de los números son menores o iguales a la mediana y la otra mitad son mayores o iguales. Si el conjunto tiene un número impar de elementos, la mediana es el valor en la posición central. Si tiene un número par de elementos, la mediana es el promedio de los dos valores centrales.
+## 🔢 Problema 2: Mantenimiento de Mediana Dinámica  
 
-### Ejemplo:
+**Ejercicio 8.6**  
 
-- Entrada: 6 5 2 1 7 5 3
-- Salida: 5 3.5 2 3.5 5 4
+### 🔹 Enunciado  
 
-- Explicación:
-    - Después de agregar `5`, el conjunto es `[5]` y la mediana es `5`.
-    - Después de agregar `2`, el conjunto es `[2, 5]` y la mediana es `(2 + 5) / 2 = 3.5`.
-    - Después de agregar `1`, el conjunto es `[1, 2, 5]` y la mediana es `2`.
-    - Después de agregar `7`, el conjunto es `[1, 2, 5, 7]` y la mediana es `(2 + 5) / 2 = 3.5`.
-    - Después de agregar `5`, el conjunto es `[1, 2, 5, 5, 7]` y la mediana es `5`.
-    - Después de agregar `3`, el conjunto es `[1, 2, 3, 5, 5, 7]` y la mediana es `(3 + 5) / 2 = 4`.
+Se necesita desarrollar un sistema capaz de calcular la **mediana** de un conjunto de números en **tiempo real**.  
 
+📌 **Requisitos:**  
+- Los números llegan de forma secuencial, uno a uno.  
+- Después de cada inserción, se debe devolver la **mediana actual**.  
+- Si el conjunto tiene un número impar de elementos, la mediana es el valor en la posición central.  
+- Si el conjunto tiene un número par de elementos, la mediana es el promedio de los dos valores centrales.  
 
+### ✨ Ejemplo  
+
+🔸 **Entrada:**  
+```
+6 5 2 1 7 5 3
+```
+
+🔹 **Salida esperada:**  
+```
+5 3.5 2 3.5 5 4
+```
+
+📌 **Explicación paso a paso:**  
+
+| Números agregados | Conjunto ordenado | Mediana |
+|-------------------|------------------|---------|
+| `6`              | `[6]`            | `6`     |
+| `5`              | `[5, 6]`         | `(5+6)/2 = 5.5` |
+| `2`              | `[2, 5, 6]`      | `5`     |
+| `1`              | `[1, 2, 5, 6]`   | `(2+5)/2 = 3.5` |
+| `7`              | `[1, 2, 5, 6, 7]` | `5`     |
+| `5`              | `[1, 2, 5, 5, 6, 7]` | `(5+5)/2 = 5` |
+| `3`              | `[1, 2, 3, 5, 5, 6, 7]` | `4` |
+
+---
+
+### 🚀 ¡A programar!  
+
+Implementa las soluciones optimizadas y analiza sus complejidades.
