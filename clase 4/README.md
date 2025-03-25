@@ -64,6 +64,18 @@ Se necesita desarrollar un sistema capaz de calcular la **mediana** de un conjun
 
 ---
 
-### 🚀 ¡A programar!  
+## Problema 3: ¿Cuáles de estos métodos construyen un heap correctamente?  
 
-Implementa las soluciones optimizadas y analiza sus complejidades.
+<!-- Falso no cumple la propiedad de un heap -->
+1. Ordenar el arreglo  
+
+<!-- Falso No garantiza la correcta estructura del heap.   -->
+2. Hacer heap-up de cada elemento desde el último al primero  
+
+3. Hacer heap-up desde el primero al último  
+
+4. Hacer heap-down desde el último al primero  
+
+<!-- Falso No garantiza la correcta estructura del hea -->
+5. Hacer heap-down desde el primero al último  
+
