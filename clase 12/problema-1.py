@@ -1,6 +1,8 @@
 import unittest
 from collections import defaultdict
 
+# n número total de perfiles. 
+# m número total de amistades
 def count_double_profiles(n, m, friendships):
     # todo
 
