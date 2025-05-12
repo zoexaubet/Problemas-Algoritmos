@@ -1,17 +1,9 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int find_min_distance(int* nums, int nums_size) {
-  int min_distance = nums_size;
-
-  for (int i = 0; i < nums_size; i++) {
-
-    for (int j = i + 1; j < nums_size; j++) {
-      if(nums[i] == nums[j] && j - 1 < min_distance)
-        min_distance = j - i;
-      }
-    }
-  return min_distance == nums_size ? -1 : min_distance;
-  }
+    return -1;
+}
 
 // TESTS
 typedef struct {
