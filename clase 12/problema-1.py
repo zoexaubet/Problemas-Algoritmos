@@ -5,7 +5,7 @@ from collections import defaultdict
 # m número total de amistades
 def count_double_profiles(n, m, friendships):
     # todo
-
+ 
 
 class TestDoubleProfiles(unittest.TestCase):
 
